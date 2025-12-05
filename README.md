@@ -1,4 +1,4 @@
-# Event Announcement System 📢
+# Event Announcement System (Decoupled Architecture) 📢
 
 A serverless event announcement platform built with AWS and modern web technologies.
 
