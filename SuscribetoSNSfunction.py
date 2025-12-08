@@ -6,8 +6,8 @@ def lambda_handler(event, context):
     print("Event received:", json.dumps(event))
 
     if 'body' in event:
-      body = event['body'] if isinstance(event['body'], dict) else json.loads(event['body'])
-      email = body.get('email', None)
+        body = event['body'] if isinstance(event['body'], dict) else json.loads(event['body'])
+        email = body.get('email', None)
 
         if email:
             sns_client = boto3.client('sns')
