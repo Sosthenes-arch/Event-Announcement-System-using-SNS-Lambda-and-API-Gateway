@@ -4,12 +4,12 @@ from botocore.exceptions import ClientError
 
 s3 = boto3.client('s3')
 sns = boto3.client('sns')
+#region = boto3.region_name('us-east-1')
 
 # S3 and SNS configuration
-bucket_name = 'your-bucket-name'
-events_file_key = 'events.json'
-sns_topic_arn = 'your-sns-topic-arn'
-
+bucket_name = 'your-bucket-name' # Replace with your S3 bucket name, that is the one with static hosting enabled. 
+events_file_key = 'events.json' # Replace with your events.json file name in this case my file is name events.json, so i will not replace it.
+sns_topic_arn = 'your-sns-topic-arn' # Replace with your SNS topic ARN
 def lambda_handler(event, context):
     try:
         new_event = json.loads(event['body'])  # Parse event body
@@ -42,7 +42,7 @@ def lambda_handler(event, context):
             },
             'body': json.dumps({'message': 'Event created successfully!'})
         }
-    
+
     except ClientError as e:
         print(f"Error: {e}")
         return {
@@ -54,7 +54,7 @@ def lambda_handler(event, context):
             },
             'body': json.dumps({'message': 'Error processing the event'})
         }
-    
+
     except Exception as e:
         print(f"Unexpected Error: {e}")
         return {
