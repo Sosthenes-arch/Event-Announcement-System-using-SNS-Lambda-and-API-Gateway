@@ -15,14 +15,14 @@ This project leverages a serverless architecture to ensure scalability and cost-
 ## ✨ Features
 
 - **Browse Events**: View upcoming events with details.
-- **Create Events**: Admin interface to post new event announcements.
+- **Create Events**: Interface to post new event announcements.
 - **Subscribe**: Users can subscribe via email to receive instant notifications (powered by AWS SNS).
 - **Responsive Design**: optimized for both desktop and mobile devices.
 
 ## 🛠️ Technologies
 
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
-- **Backend**: AWS Lambda (Node.js/Python)
+- **Backend**: AWS Lambda (Python)
 - **API**: AWS API Gateway
 - **Notifications**: Amazon SNS (Simple Notification Service)
 - **Hosting**: AWS S3 (Static Website Hosting)

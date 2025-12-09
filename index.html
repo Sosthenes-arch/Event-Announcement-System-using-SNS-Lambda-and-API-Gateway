@@ -12,6 +12,7 @@
     <div class="container">
         <header>
             <img src="Uche Ugochukwu.jpeg" alt="Site Logo" class="site-logo">
+            <!-- you can remove this line or you can use your logo or image -->
             <h1>Uche's Event Annoucements</h1>
             <p>Stay tuned for the latest events and announcements!</p>
             <button onclick="subscribeToEvents()">Subscribe to Events</button>
@@ -90,7 +91,7 @@
                 };
 
                 try {
-                    const response = await fetch('<YOUR_CREATE_EVENT_API_ENDPOINT>', {
+                    const response = await fetch('Put your API Gateway URL here for /create-event or something like that it should look like: https://f7skg34677.execute-api.us-southeast-1.amazonaws.com/dev/create-event', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -118,7 +119,7 @@
                 const email = prompt("Enter your email to subscribe to event notifications:");
                 if (email) {
                     try {
-                        const response = await fetch('<YOUR_SUBSCRIBE_API_ENDPOINT>', {
+                        const response = await fetch('Put your API Gateway URL here for /suscribe or something like that', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
